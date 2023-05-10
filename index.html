@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<head>
+<title>POTKIEES!</title>
+<link rel="icon" href="cookie.png">
+<style>
+
+*{
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+}
+
+body{
+	height: 100%;
+}
+
+.nb{
+	padding: 20px 5%;
+	display: flex;
+	justify-content: space-between;
+	align-items center;
+	position: fixed;
+	z-index: 999;
+	background-color: #f3f4f6;
+	box-shadow: 0 0 14px rgba(0,0,0,0.5);
+	
+}
+
+.nb .logo h1{
+	font-size: 50px;
+	color: #424144;
+	border-bottom: 10px solid #C19A6B;
+	margin-right:560.5px;
+	
+}
+
+.nb .menu li{
+	list-style: none;
+	display: inline-block;
+}
+
+.nb .menu li a{
+	display: block;
+	margin-top:15px;
+	margin-left: 10.5px;
+	color: #424144;
+	border-bottom: 4px solid transparent;
+	text-decoration: none;
+	font-size: 25px;
+	font-weight:bold;
+}
+
+.nb .menu li a:hover{
+	border-bottom: 8px solid #C19A6B;
+}
+
+.tagline{
+	padding: 0 5%;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	color: #424144;
+}
+
+.tagline{
+	background-image: url(bg2.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	padding: 0 5%;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	color: #424144;
+	height: 100vh;
+}
+
+.tagline img{
+	margin-top:-200px;
+	width:60%;	
+	height:auto;
+}
+
+.tagline h1{
+	font-size:100px;
+	font-family:Brush Script MT, Brush Script Std, cursive;
+}
+
+.tagline button{
+	margin-top:-270px;
+	margin-left:275px;
+	padding: 15px 30px;
+	border:none;
+	background: #C19A6B;
+	color: white;
+	font-size: 30px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition-duration:0.3s;
+	-webkit-transition-property: box-shadow, transform;
+	transition-property: box-shadow, transform;
+}
+
+.tagline button:hover,button:focus.button:active{
+	box-shadow: 0 0 20px rgba (0,0,0,0.5);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.c h1{
+	font-size: 55px;
+	color: #424144;
+	text-align:center;
+	padding:40px;
+	padding-bottom:80px;
+}
+
+.c{	
+	padding: 10px 5%;
+	height: 100vh;
+}
+
+.cookiees{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+.cookiees .card{
+	width: 310px;
+	background:white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+	border-radius: 5px;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+
+.cookiees .card img{
+	heigth: 1000px;	
+	width: 100%;
+}
+
+.cookiees .card .name{
+	text-align:center;
+	font-weight: 900;
+	font-size: 20px;
+	color: #424144;
+	padding-top: 20px;
+}
+
+.cookiees .card .box{
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	padding: 20px;
+}
+
+.cookiees .card .box .p{
+	color: #C19A6B;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.cookiees .card .box .btn{
+	font-size:20px;
+	color: #C19A6B;
+	padding: 10px 18px;
+	font-weight: 900;
+	border:1px solid #C19A6B;
+}
+
+.cookiees .card .box .btn:hover{
+	font-size:20px;
+	cursor: pointer;
+	background-color: #C19A6B;
+	color: white;
+}
+
+.about{
+	padding: 10px 5%;
+	height: 100vh;
+	background-color:#EADDCA;
+}
+
+.about p{
+	font-size: 23px;
+	font-family:Times;
+}
+
+.about h1{
+	font-size: 55px;
+	color: #424144;
+	text-align:center;
+	padding:40px;
+}
+
+.about img{
+	width: 25em;
+	height: auto;
+	float:left;
+	margin-right: 20px;
+}
+
+.about .b{
+	width: wrap;
+	height: auto;
+	padding: 40px;
+	border: 10px outset #988558;
+	box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+	border-radius: 5px;
+}
+
+.reviews{
+	padding: 10px 5%;
+	height: 100vh;
+	background-color: white;
+}
+
+.reviews .container{
+	display:grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+	gap: 1.5rem;
+	margin: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+
+
+.reviews .container .boxx{
+	width: 400px;
+	background:white;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 20px;
+	text-align:center;
+}
+
+
+.reviews h1{
+	font-size: 55px;
+	color: #424144;
+	text-align:center;
+	padding:40px;
+	padding-bottom:80px;
+}
+
+.contact h1{
+	font-size: 55px;
+	color: #424144;
+	text-align:center;
+	padding:40px;
+}
+
+.container .boxx p{
+	font-size: 20px;
+	padding: 5px;
+}
+
+.container .boxx h2{
+	padding: 5px;
+	font-size: 30px;
+	font-weigth:bold;
+	margin: 5px 0 5px;
+}
+
+.container .boxx img{
+	width: 100px;
+	height: 100px;
+	border-radius:50%;
+	object-fit:cover;
+}
+.contact{
+	background-color:#EADDCA;
+	height:100vh;
+	color: #424144;
+}
+
+.contact .row{
+	display: flex;
+	align-items:center;
+}
+
+.contact .row form{
+	flex:20em;
+	font-size:20px;
+}
+
+.contact .row img{
+	width:38em;
+	height:30em;
+	margin-left:125px;
+	padding-right:-50px;
+}
+
+.contact .row form .ib{
+	align-item:center;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-bottom:1px;
+}
+
+.contact .row form .ib input{
+	width:60%;
+	padding:10px;
+	font-size:20px;
+}
+
+.contact input{
+	padding:10px;
+	margin-left:50px;
+}
+
+.contact .row h3,h4{
+	margin-left:50px;
+}
+
+.contact .row h3{
+	padding-bottom:10px;
+}
+
+.button input{
+	font-size:20px;
+	color: #C19A6B;
+	padding: 10px 18px;
+	font-weight: 900;
+	border:1px solid #C19A6B;
+}
+
+.button input:hover{
+	font-size:20px;
+	cursor: pointer;
+	background-color: #C19A6B;
+	color: white;
+}
+</style>
+</head>
+<body>
+
+<nav class="nb">
+<div class="logo"><h1>POTKIEES!</h1></div>
+<ul class="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#ck">Cookiees</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#review">Review</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section id="home" class="tagline">
+<img src="logo.png">
+<button onclick="document.location.href='#ck';">Order Now!</button>
+</section>
+
+
+<section class="c">
+<h1 id="ck"></h1>
+<h1>Taste Our Cookies!</h1>
+<div class="cookiees">
+	<div class="card">
+		<div class="display"><img src="c1.png" alt="Original"></div>
+		<div class="name">Orginal Cookie</div>
+		<div class="box">
+			<div class="p">₱20</div>
+			<button class="btn">Order Now</div>
+	</div>
+
+	<div class="card">
+		<div class="display"><img src="c2.png" alt="Original"></div>
+		<div class="name">Chocolate Cookie</div>
+		<div class="box">
+			<div class="p">₱25</div>
+			<button class="btn">Order Now</div>
+	</div>
+
+	<div class="card">
+		<div class="display"><img src="c3.png" alt="Original"></div>
+		<div class="name">Cinamon Cookie</div>
+		<div class="box">
+			<div class="p">₱20</div>
+			<button class="btn">Order Now</div>
+	</div>
+</div>
+</section>
+
+<section class="about">
+<h1 id="about"></h1>
+<h1>About us</h1>
+<br>
+<div class="b">
+<img src="creators.jpg">
+<p>Welcome to our cookie business! We are passionate about baking delicious and high-quality cookies that bring joy and satisfaction to our customers. Our mission is to create a memorable experience for every person who tastes our cookies.
+<br><br>
+Our cookie business was founded by a group of friends who shared a passion for baking. We started small, baking cookies for our families and friends.
+<br><br>
+We believe that the key to making great cookies is using only the best ingredients. That's why we use only premium quality ingredients in our cookies. We don't use any preservatives, artificial colors, or flavors. Our cookies are baked fresh every day, ensuring that they are always soft and chewy.</p>
+</div>
+</section>
+
+<section class="reviews">
+<h1 id="review"></h1>
+<h1>Customer Reviews</h1>
+
+<div class="container">
+	<div class="boxx">
+		<div class="stars">
+			<i class='fas fa-star'></i>
+			<i class='fas fa-star'></i>
+			<i class='fas fa-star'></i>
+			<i class='fas fa-star'></i>
+			<i class='fas fa-star-half'></i>
+		</div>
+	<p>These cookies are amazing! I always love to see what new flavors they come up with. I truly have never ate a cookie here that I didn’t like!</p>
+	<h2>Cathy Nampusico</h2>
+	<img src="rev1.jpg">
+	</div>
+
+	<div class="boxx">
+	<p>These cookies are amazing! I always love to see what new flavors they come up with. I truly have never ate a cookie here that I didn’t like!</p>
+	<h2>Kent Thot</h2>
+	<img src="rev2.jpg">
+	</div>
+
+	<div class="boxx">
+	<p>These cookies are amazing! I always love to see what new flavors they come up with. I truly have never ate a cookie here that I didn’t like!</p>
+	<h2>Jobert</h2>
+	<img src="rev3.jpg">
+	</div>
+</div>
+</section>
+
+<section class="contact">
+<h1 id="contact"></h1>
+<h1>Contact Us</h1>
+
+<div class="row">
+<img src="logo.png">
+
+<form action="">
+<h3>GET IN TOUCH</h3>
+<div class="ib">
+	<h4>Name: </h4>
+	<input type="text" placeholder="name">
+</div>
+
+<div class="ib">
+	<h4>Email: </h4>
+	<input type="text" placeholder="email">
+</div>
+
+<div class="ib">
+	<h4>Phone No.: </h4>
+	<input type="text" placeholder="number">
+</div>
+<div class="button">
+<input type="submit" value="Contact Now">
+</div>
+
+</form>
+</section>
+
+
+</div>
+</body>
+</html>
